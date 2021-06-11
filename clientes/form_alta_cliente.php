@@ -5,7 +5,6 @@
 		header("Location: ../index.php");
 	} 
 
-	// Si no existen datos del formulario en la sesión, se crea una entrada con valores por defecto
 	if (!isset($_SESSION['form_alta_cliente'])) {
 		$form_alta_cliente['nombre'] = "";
 		$form_alta_cliente['apellidos'] = "";
@@ -22,11 +21,10 @@
 	
 		$_SESSION['form_alta_cliente'] = $form_alta_cliente;
 	}
-	// Si ya existían valores, los cogemos para inicializar el formulario
+
 	else
 		$form_alta_cliente = $_SESSION['form_alta_cliente'];
-			
-	// Si hay errores de validación, hay que mostrarlos y marcar los campos (El estilo viene dado y ya se explicará)
+
 	if (isset($_SESSION["errores"]))
 		$errores = $_SESSION["errores"];
 ?>

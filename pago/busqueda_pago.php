@@ -41,8 +41,8 @@
 <main>
     <nav class="navbar navbar-light">
         <div class="container d-block">
-            <a href="consulta_monitores.php"><i class="bi bi-chevron-left"></i></a>
-            <a class="navbar-brand ms-4" href="consulta_monitores.php">
+            <a href="consulta_pagos.php"><i class="bi bi-chevron-left"></i></a>
+            <a class="navbar-brand ms-4" href="consulta_pagos.php">
                 <img src="../assets/images/logo/logo2.png">
             </a>
         </div>

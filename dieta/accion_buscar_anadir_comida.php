@@ -32,9 +32,10 @@
 									value="' . $descripcion . '" />
 									
 								<div class="nombres">' . $nombreComida. ': ' . $descripcion . '</div>
-								
-								<div><label for="dia">Día:<em>*</em></label>
-									<select id="dia" name="dia" size="1" required>
+
+								<div class="form-group">
+								<label for="dia">Día: *</label>
+								<select class="form-select" id="dia" name="dia" size="1" required>
 										<option>Seleccione un día de la lista</option>
 										<option value="Lunes">Lunes</option>
 										<option value="Martes">Martes</option>
@@ -45,14 +46,14 @@
 										<option value="Domingo">Domingo</option>
 									</select>
 								</div>
-
-								<div><label for="hora">Hora:<em>*</em></label>
-									<input id="hora" name="hora" type="text" size="5" placeholder="HH:MM" pattern="^([0-1]?[0-9]|2[0-3]):[0-5][0-9]$" required />
+								<div class="form-group">
+								<label for="hora">Hora: *</label>
+								<input type="text" class="form-control" id="hora" name="hora" placeholder="HH:MM" pattern="^([0-1]?[0-9]|2[0-3]):[0-5][0-9]$" required/>
 								</div>
 								
 							</div>
 										
-							<button id="añadir" name="añadir" type="submit" class="editar_fila">
+							<button class="btn btn-primary" id="añadir" name="añadir" type="submit" class="editar_fila">
 								Añadir
 							</button>
 									

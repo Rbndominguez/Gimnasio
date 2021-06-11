@@ -2,7 +2,7 @@
 	session_start();
 	require_once ("../gestionBD.php");
 	require_once ("gestionClases.php");
-	// Si no existen datos del formulario en la sesión, se crea una entrada con valores por defecto
+
 	if (!isset($_SESSION["form_crea_clase"])) {
 		$form_crea_clase["nombreClase"] = "";
 		$form_crea_clase["horario"] = "";
@@ -13,11 +13,11 @@
 	
 		$_SESSION["form_crea_clase"] = $form_crea_clase;
 	}
-	// Si ya existían valores, los cogemos para inicializar el formulario
+
 	else
 		$form_crea_clase = $_SESSION["form_crea_clase"];
 	
-	// Si hay errores de validación, hay que mostrarlos y marcar los campos (El estilo viene dado y ya se explicará)
+
 	if (isset($_SESSION["errores"]))
 		$errores = $_SESSION["errores"];
 ?>

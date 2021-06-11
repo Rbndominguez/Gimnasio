@@ -12,7 +12,7 @@
 		$filas = busquedaDieta($conexion, $consultaBusqueda);
 		cerrarConexionBD($conexion);
 		
-		echo '<p>Resultados para <strong>' . $consultaBusqueda . '</strong></p>';
+		echo '<p><br>Resultados para <strong>' . $consultaBusqueda . '</strong></p>';
 			
 		foreach($filas as $fila) {
 			$oid_di = $fila['oid_di'];
@@ -34,18 +34,19 @@
 									value="' . $descripcion . '" />
 								<input type="hidden" id="duracion" name="duracion"
 									value="' . $duracion . '" />
-								<button id="mostrar" name="mostrar" type="submit" class="mostrar_fila">
+									<br>	
+								<button class="btn btn-primary" id="mostrar" name="mostrar" type="submit" class="mostrar_fila">
 										<div class="nombres">' . $nombre . ', ' . $duracion . '</div>
 								</button>
 							
 							</div>
-							
+							<br>
 							<div id="botones_fila">
-								<button id="editar" name="editar" type="submit" class="editar_fila">
-									<img src="../images/editar_small.png" class="editar_fila" alt="Editar dieta">
+								<button class="btn btn-outline-primary" id="editar" name="editar" type="submit" class="editar_fila">
+									<i class="fa fa-edit" class="editar_fila" alt="Editar dieta"></i>
 								</button>
-								<button id="borrar" name="borrar" type="submit" class="editar_fila">
-									<img src="../images/remove_small.png" class="editar_fila" alt="Borrar dieta">
+								<button class="btn btn-outline-danger" id="borrar" name="borrar" type="submit" class="editar_fila">
+									<i class="fa fa-trash" class="editar_fila" alt="Borrar dieta"></i>
 								</button>
 							</div>
 						</div>

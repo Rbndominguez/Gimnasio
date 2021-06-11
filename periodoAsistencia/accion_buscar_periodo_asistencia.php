@@ -45,18 +45,19 @@ if (isset($consultaBusqueda)) {
 										value="' . $nombre . '" />
 									<input type="hidden" id="apellidos" name="apellidos"
 										value="' . $apellidos . '" />
-									<button id="mostrar" name="mostrar" type="submit" class="mostrar_fila">
-										<div class="nombres">' . $fechaInicio. ' - ' . $fechaFin. '</div>
+										<br>
+										<button class="btn btn-primary" name="mostrar" type="submit" class="mostrar_fila">
+										<div class="nombres">' . $fechaInicio. ' - ' . $fechaFin. ' - ' . $nombre. ' , ' . $apellidos.'</div>
 									</button>
 					
 								</div>
-				
+								<br>
 								<div id="botones_fila">
-									<button id="editar" name="editar" type="submit" class="editar_fila">
-										<img src="../images/editar_small.png" class="editar_fila" alt="Editar periodo de asistencia">
+								<button class="btn btn-outline-primary" id="editar" name="editar" type="submit" class="editar_fila">
+										<i class="fa fa-edit" class="editar_fila" alt="Editar periodo de asistenciago"></i>
 									</button>
-									<button id="borrar" name="borrar" type="submit" class="editar_fila">
-										<img src="../images/remove_small.png" class="editar_fila" alt="Borrar periodo de asistencia">
+									<button class="btn btn-outline-danger" id="borrar" name="borrar" type="submit" class="editar_fila">
+										<i class="fa fa-trash" class="editar_fila" alt="Borrar periodo de asistencia"></i>
 									</button>
 								</div>
 							</div>

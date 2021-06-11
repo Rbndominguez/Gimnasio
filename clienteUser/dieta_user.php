@@ -33,12 +33,28 @@
   <meta charset="utf-8">
   <title>Información de la tabla de ejercicios</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/bootstrap.css">
+    <link rel="stylesheet" href="../assets/vendors/bootstrap-icons/bootstrap-icons.css">
+    <link rel="stylesheet" href="../assets/css/app.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
+	<nav class="navbar navbar-light">
+        <div class="container d-block">
+            <a href="../admin/indexCliente.php"><i class="bi bi-chevron-left"></i></a>
+            <a class="navbar-brand ms-4" href="../admin/indexCliente.php">
+                <img src="../assets/images/logo/logo2.png">
+            </a>
+        </div>
+    </nav>
+
+
+
+	<div class="container">
+        <div class="card mt-5">
+            <div class="card-body">
 	<?php
 	if($oid_di == NULL) { ?>
 		<script>window.close();</script>
@@ -49,8 +65,9 @@
 	
 	<?php if ($num_comidas > 0) { ?>
 			
-			<table class="table table-striped" style="width:100%">
-				<caption>LUNES</caption>
+		<div class="table-responsive">
+			<table class="table table-striped mb-0">
+				<p>LUNES</p>
  				<tr>
     				<th>Hora</th>
     				<th>Nombre</th> 
@@ -65,9 +82,11 @@
  			 			</tr>
 				<?php } ?>
 			</table>
-			
-			<table class="table table-striped" style="width:100%">
-				<caption>MARTES</caption>
+			  </div>
+			  <br>
+			<div class="table-responsive">
+			<table class="table table-striped mb-0">
+				<p>MARTES</p>
  				<tr>
     				<th>Hora</th>
     				<th>Nombre</th> 
@@ -82,14 +101,15 @@
  			 			</tr>			
 				<?php } ?>
 			</table>
-			
-			<table class="table table-striped" style="width:100%">
-				<caption>MIÉRCOLES</caption>
+			  </div>
+			<br>
+			  <div class="table-responsive">
+			<table class="table table-striped mb-0">
+				<p>MIÉRCOLES</p>
  				<tr>
     				<th>Hora</th>
     				<th>Nombre</th> 
     				<th>Descripcion</th>
-    				<th></th>
   				</tr>
   				
   			<?php foreach($comidasX as $comidaX) { ?>
@@ -100,9 +120,12 @@
  			 			</tr>
 				<?php } ?>
 			</table>
-			
-			<table class="table table-striped" style="width:100%">
-				<caption>JUEVES</caption>
+			</div>
+			<br>
+
+			<div class="table-responsive">
+			<table class="table table-striped mb-0">
+				<p>JUEVES</p>
  				<tr>
     				<th>Hora</th>
     				<th>Nombre</th> 
@@ -117,9 +140,12 @@
  			 			</tr>			
 				<?php } ?>
 			</table>
+			</div>
+			<br>
 			
-			<table class="table table-striped" style="width:100%">
-				<caption>VIERNES</caption>
+			<div class="table-responsive">
+			<table class="table table-striped mb-0">
+				<p>VIERNES</p>
  				<tr>
     				<th>Hora</th>
     				<th>Nombre</th> 
@@ -134,9 +160,12 @@
  			 			</tr>	
 				<?php } ?>
 			</table>
+			</div>
+			<br>
 			
-			<table class="table table-striped" style="width:100%">
-				<caption>SÁBADO</caption>
+			<div class="table-responsive">
+			<table class="table table-striped mb-0">
+				<p>SÁBADO</p>
  				<tr>
     				<th>Hora</th>
     				<th>Nombre</th> 
@@ -151,9 +180,12 @@
  			 			</tr>
 				<?php } ?>
 			</table>
+			</div>
+			<br>
 			
-			<table class="table table-striped" style="width:100%">
-				<caption>DOMINGO</caption>
+			<div class="table-responsive">
+			<table class="table table-striped mb-0">
+				<p>DOMINGO</p>
  				<tr>
     				<th>Hora</th>
     				<th>Nombre</th> 
@@ -168,7 +200,12 @@
  			 			</tr>
 				<?php } ?>
 			</table>
+			</div>
+			<br>
 		<?php } ?>
 	
+		</div>
+	</article>
+
 	</body>
 </html>

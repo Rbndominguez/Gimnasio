@@ -30,21 +30,38 @@
   <meta charset="utf-8">
   <title>Información de la dieta</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <link href="../css/muestra.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/bootstrap.css">
+    <link rel="stylesheet" href="../assets/vendors/bootstrap-icons/bootstrap-icons.css">
+    <link rel="stylesheet" href="../assets/css/app.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
+	<nav class="navbar navbar-light">
+        <div class="container d-block">
+            <a href="consulta_dietas.php"><i class="bi bi-chevron-left"></i></a>
+            <a class="navbar-brand ms-4" href="consulta_dietas.php">
+                <img src="../assets/images/logo/logo2.png">
+            </a>
+        </div>
+    </nav>
 
+
+
+	<div class="container">
+        <div class="card mt-5">
+            <div class="card-header">
+                <h4 class="card-title">Datos del Monitor</h4>
+            </div>
+            <div class="card-body">
 	<p><b><?php echo $dieta["nombreDieta"] . ": " . $dieta["descripcion"] . " [" . $dieta["duracion"] . "]";?>
 	</b></p>
 	
 	<?php if ($num_comidas > 0) { ?>
-			
-			<table class="table table-striped" style="width:100%">
-				<caption>LUNES</caption>
+			<div class="table-responsive">
+			<table class="table table-striped mb-0">
+				<p>LUNES</p>
  				<tr>
     				<th>Hora</th>
     				<th>Nombre</th> 
@@ -69,15 +86,17 @@
    			 				<td><?php echo $comidaL["hora"]; ?></td>
     						<td><?php echo $comidaL["nombrecomida"]; ?></td> 
    				 			<td><?php echo $comidaL["descripcion"]; ?></td>
-   				 			<td><button id="quitar" name="quitar" type="submit" class="editar_fila">Quitar</button></td>
+   				 			<td><button class="btn btn-danger" id="quitar" name="quitar" type="submit" class="editar_fila">Quitar</button></td>
  			 			</tr>
 			
 					</form>
 				<?php } ?>
-			</table>
-			
-			<table class="table table-striped" style="width:100%">
-				<caption>MARTES</caption>
+				</table>
+                                    </div>      
+									<br>
+			<div class="table-responsive">
+			<table class="table table-striped mb-0">
+				<p>MARTES</p>
  				<tr>
     				<th>Hora</th>
     				<th>Nombre</th> 
@@ -102,15 +121,17 @@
    			 				<td><?php echo $comidaM["hora"]; ?></td>
     						<td><?php echo $comidaM["nombrecomida"]; ?></td> 
    				 			<td><?php echo $comidaM["descripcion"]; ?></td>
-   				 			<td><button id="quitar" name="quitar" type="submit" class="editar_fila">Quitar</button></td>
+   				 			<td><button class="btn btn-danger" id="quitar" name="quitar" type="submit" class="editar_fila">Quitar</button></td>
  			 			</tr>
 			
 					</form>
 				<?php } ?>
 			</table>
-			
-			<table class="table table-striped" style="width:100%">
-				<caption>MIÉRCOLES</caption>
+			  </div>
+			  <br>
+			  <div class="table-responsive">
+			<table class="table table-striped mb-0">
+				<p>MIÉRCOLES</p>
  				<tr>
     				<th>Hora</th>
     				<th>Nombre</th> 
@@ -135,15 +156,17 @@
    			 				<td><?php echo $comidaX["hora"]; ?></td>
     						<td><?php echo $comidaX["nombrecomida"]; ?></td> 
    				 			<td><?php echo $comidaX["descripcion"]; ?></td>
-   				 			<td><button id="quitar" name="quitar" type="submit" class="editar_fila">Quitar</button></td>
+   				 			<td><button class="btn btn-danger" id="quitar" name="quitar" type="submit" class="editar_fila">Quitar</button></td>
  			 			</tr>
 			
 					</form>
 				<?php } ?>
 			</table>
-			
-			<table class="table table-striped" style="width:100%">
-				<caption>JUEVES</caption>
+			  </div>
+			  <br>
+			  <div class="table-responsive">
+			<table class="table table-striped mb-0">
+				<p>JUEVES</p>
  				<tr>
     				<th>Hora</th>
     				<th>Nombre</th> 
@@ -168,15 +191,17 @@
    			 				<td><?php echo $comidaJ["hora"]; ?></td>
     						<td><?php echo $comidaJ["nombrecomida"]; ?></td> 
    				 			<td><?php echo $comidaJ["descripcion"]; ?></td>
-   				 			<td><button id="quitar" name="quitar" type="submit" class="editar_fila">Quitar</button></td>
+   				 			<td><button class="btn btn-danger" id="quitar" name="quitar" type="submit" class="editar_fila">Quitar</button></td>
  			 			</tr>
 			
 					</form>
 				<?php } ?>
 			</table>
-			
-			<table class="table table-striped" style="width:100%">
-				<caption>VIERNES</caption>
+			  </div>
+			  <br>
+			  <div class="table-responsive">
+			<table class="table table-striped mb-0">
+				<p>VIERNES</p>
  				<tr>
     				<th>Hora</th>
     				<th>Nombre</th> 
@@ -201,15 +226,17 @@
    			 				<td><?php echo $comidaV["hora"]; ?></td>
     						<td><?php echo $comidaV["nombrecomida"]; ?></td> 
    				 			<td><?php echo $comidaV["descripcion"]; ?></td>
-   				 			<td><button id="quitar" name="quitar" type="submit" class="editar_fila">Quitar</button></td>
+   				 			<td><button class="btn btn-danger" id="quitar" name="quitar" type="submit" class="editar_fila">Quitar</button></td>
  			 			</tr>
 			
 					</form>
 				<?php } ?>
 			</table>
-			
-			<table class="table table-striped" style="width:100%">
-				<caption>SÁBADO</caption>
+			  </div>
+			  <br>
+			  <div class="table-responsive">
+			<table class="table table-striped mb-0">
+				<p>SÁBADO</p>
  				<tr>
     				<th>Hora</th>
     				<th>Nombre</th> 
@@ -234,15 +261,17 @@
    			 				<td><?php echo $comidaS["hora"]; ?></td>
     						<td><?php echo $comidaS["nombrecomida"]; ?></td> 
    				 			<td><?php echo $comidaS["descripcion"]; ?></td>
-   				 			<td><button id="quitar" name="quitar" type="submit" class="editar_fila">Quitar</button></td>
+   				 			<td><button class="btn btn-danger" id="quitar" name="quitar" type="submit" class="editar_fila">Quitar</button></td>
  			 			</tr>
 			
 					</form>
 				<?php } ?>
 			</table>
-			
-			<table class="table table-striped" style="width:100%">
-				<caption>DOMINGO</caption>
+			  </div>
+				<br>
+			  <div class="table-responsive">
+			<table class="table table-striped mb-0">
+				<p>DOMINGO</p>
  				<tr>
     				<th>Hora</th>
     				<th>Nombre</th> 
@@ -267,12 +296,14 @@
    			 				<td><?php echo $comidaD["hora"]; ?></td>
     						<td><?php echo $comidaD["nombrecomida"]; ?></td> 
    				 			<td><?php echo $comidaD["descripcion"]; ?></td>
-   				 			<td><button id="quitar" name="quitar" type="submit" class="editar_fila">Quitar</button></td>
+   				 			<td><button class="btn btn-danger" id="quitar" name="quitar" type="submit" class="editar_fila">Quitar</class=></td>
  			 			</tr>
 			
 					</form>
 				<?php } ?>
 			</table>
+			  </div>
+				<br>
 		<?php } ?>
 	
 	<article class="dieta">
@@ -291,22 +322,23 @@
 				</div>
 				
 				<div id="botones_fila">
-					<button id="editar" name="editar" type="submit" class="editar_fila">
-						<img src="../images/editar_small.png" class="editar_fila" alt="Editar dieta">
-					</button>
-					<button id="borrar" name="borrar" type="submit" class="editar_fila">
-						<img src="../images/remove_small.png" class="editar_fila" alt="Borrar dieta">
+				<button class="btn btn-outline-primary" id="editar" name="editar" type="submit" class="editar_fila">
+					<i class="fa fa-edit" class="editar_fila" alt="Editar dieta"></i>
 					</button>
 					
-					<button id="añadir" name="añadir" type="submit" class="editar_fila">
+					<button class="btn btn-outline-danger" id="borrar" name="borrar" type="submit" class="editar_fila" >
+					<i class="fa fa-trash" class="editar_fila" alt="Borrar dieta"></i>
+						</button>
+
+					<button class="btn btn-primary" id="añadir" name="añadir" type="submit" class="editar_fila">
 						Añadir comida
 					</button>
 					
-					<button onClick="window.close();opener.location.reload();">Cerrar</button>
-				</div>
+					<button class="btn btn-danger" onClick="window.close();opener.location.reload();">Cerrar</button>
+					</div>
 			</div>
 		</form>
 	</article>
-	
+
 	</body>
 </html>

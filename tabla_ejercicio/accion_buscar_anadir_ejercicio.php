@@ -43,15 +43,16 @@
 										
 									<br>										
 									<div class="nombres">' .  $nombreEjercicio . ': ' . $descripcion . ' [' . $duracion . ' min]</div>
-									
-									<div><label for="numOrden">Número de orden:<em>*</em></label>
-										<input id="numOrden" name="numOrden" type="text" size="5" required />
+
+									<div class="form-group">
+								<label for="numOrden">Número de orden: *</label>
+										<input class="form-control" id="numOrden" name="numOrden" type="text" size="5" required />
 									</div>
 																																		
 								</div>
 					
 								<div id="botones_fila">
-									<button id="añadir" name="añadir" type="submit" class="editar_fila">
+									<button class="btn btn-primary" id="añadir" name="añadir" type="submit" class="editar_fila">
 										Añadir
 									</button>
 								</div>
@@ -81,11 +82,12 @@
 									<br>
 									<div class="nombres">' . $nombreEjercicio . ': ' . $descripcion . ' [' . $series . ' series, ' . $repeticiones . ' reps/serie]</div>										
 									
-									<div><label for="numOrden">Número de orden:<em>*</em></label>
-										<input id="numOrden" name="numOrden" type="text" size="5" required />
+									<div class="form-group">
+								<label for="numOrden">Número de orden: *</label>
+										<input class="form-control" id="numOrden" name="numOrden" type="text" size="5" required />
 									</div>
-									
-								</div>
+								
+							</div>
 					
 								<div id="botones_fila">
 									<button id="añadir" name="añadir" type="submit" class="editar_fila">

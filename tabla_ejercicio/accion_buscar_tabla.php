@@ -12,7 +12,7 @@
 		$filas = busquedaTabla($conexion, $consultaBusqueda);
 		cerrarConexionBD($conexion);
 		
-		echo '<p>Resultados para <strong>' . $consultaBusqueda . '</strong></p>';
+		echo '<p><br>Resultados para <strong>' . $consultaBusqueda . '</strong></p>';
 			
 		foreach($filas as $fila) {
 			$oid_te = $fila['oid_te'];
@@ -41,19 +41,19 @@
 									value="' . $duracion . '" />
 								<input type="hidden" id="recuperacion" name ="recuperacion"
 									value="' . $recuperacion . '"/>
-							
-								<button id="mostrar" name="mostrar" type="submit" class="mostrar_fila">
+									<br>	
+									<button class="btn btn-primary" id="mostrar" name="mostrar" type="submit" class="mostrar_fila">
 										<div class="nombres">' . $nombre . ' [' . $recuperacion . ']</div>
 								</button>
 								
 							</div>
-								
+							<br>
 							<div id="botones_fila">
-								<button id="editar" name="editar" type="submit" class="editar_fila">
-									<img src="../images/editar_small.png" class="editar_fila" alt="Editar tablaEjercicio">
+							<button class="btn btn-outline-primary" id="editar" name="editar" type="submit" class="editar_fila">
+									<i class="fa fa-edit" class="editar_fila" alt="Editar tablaEjercicio"></i>
 								</button>
-								<button id="borrar" name="borrar" type="submit" class="editar_fila">
-									<img src="../images/remove_small.png" class="editar_fila" alt="Borrar tablaEjercicio">
+								<button class="btn btn-outline-danger" id="borrar" name="borrar" type="submit" class="editar_fila">
+									<i class="fa fa-trash" class="editar_fila" alt="Borrar tablaEjercicio"></i>
 								</button>
 							</div>
 						</div>

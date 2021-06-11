@@ -67,13 +67,14 @@
 		} else { ?>
 			<script language="javascript">
   				function cierraPopup(){
-    				window.close(); 
+    				window.history.back();
 				}
 	
 				function cambiada(){	
  					document.open();
  					document.write("<h1>La contraseña ha sido cambiada con éxito</h1>");
  					window.setTimeout("cierraPopup()", 1000);
+					 
 				}
 				cambiada();
 			</script>

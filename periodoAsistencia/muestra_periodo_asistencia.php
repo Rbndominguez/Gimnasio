@@ -20,12 +20,31 @@
 <html lang="es">
 <head>
   <meta charset="utf-8">
-  <title>Información de los periodos de asistencia</title>
-  <link rel="stylesheet" type="text/css" href="../css/muestra.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/bootstrap.css">
+    <link rel="stylesheet" href="../assets/vendors/bootstrap-icons/bootstrap-icons.css">
+    <link rel="stylesheet" href="../assets/css/app.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
+    <nav class="navbar navbar-light">
+        <div class="container d-block">
+            <a href="consulta_periodos_asistencia.php"><i class="bi bi-chevron-left"></i></a>
+            <a class="navbar-brand ms-4" href="consulta_periodos_asistencia.php">
+                <img src="../assets/images/logo/logo2.png">
+            </a>
+        </div>
+    </nav>
 
+
+    <div class="container">
+        <div class="card mt-5">
+            <div class="card-header">
+                <h4 class="card-title">Datos del Pago</h4>
+            </div>
+            <div class="card-body">
 	<p><b>Fecha de Inicio: </b><?php echo $periodoAsistencia["fechaInicio"];?></p>
 	<?php if($periodoAsistencia["fechaFin"] != NULL) { ?>
 		<p><b>Fecha Fin: </b><?php echo $periodoAsistencia["fechaFin"];?></p>
@@ -55,20 +74,25 @@
 				
 				</div>
 				
-				<div id="botones_fila">
-					<!-- Botón de editar -->
-					<button id="editar" name="editar" type="submit" class="editar_fila">
-						<img src="../images/editar_small.png" class="editar_fila" alt="Editar periodo de asistencia">
+					<div id="botones_fila">
+				<button class="btn btn-outline-primary" id="editar" name="editar" type="submit" class="editar_fila">
+					<i class="fa fa-edit" class="editar_fila" alt="Editar periodo de asistencia"></i>
 					</button>
 					
-					<button id="borrar" name="borrar" type="submit" class="editar_fila">
-						<img src="../images/remove_small.png" class="editar_fila" alt="Borrar periodo de asistencia">
-					</button>
-					<button onClick="window.close();opener.location.reload();">Cerrar</button>
+					<button class="btn btn-outline-danger" id="borrar" name="borrar" type="submit" class="editar_fila" >
+					<i class="fa fa-trash" class="editar_fila" alt="Borrar periodo de asistencia"></i>
+						</button>
+					<button class="btn btn-danger" onClick="window.close();opener.location.reload();">Cerrar</button>
+					</div>
+				
+				</div>
+			</form>
+			</article>
 				</div>
 			</div>
-		</form>
-	</article>
+		</div>
+		
 	
 	</body>
-</html>
+	
+	</html>

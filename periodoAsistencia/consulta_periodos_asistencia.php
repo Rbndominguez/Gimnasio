@@ -86,14 +86,12 @@
 <br>
 
 		<button id="btnnuevo" name="nuevo" type="submit">
-	<a href="form_crea_periodo_asistencia.php" target="popup"
-				onClick="window.open(this.href, this.target, 'toolbar=0 , location=0 , status=0 , menubar=0 , scrollbars=0 , resizable=1 ,left=300em,top=150em,width=800em,height=400em');">
+	<a href="form_crea_periodo_asistencia.php" target="popup">
     <i class="fa fa-plus"></i>
 	</a>				
 	</button>
 	<button id="btnbuscar" name="buscar" type="submit">
-	<a href="busqueda_periodo_asistencia.php" target="popup"
-				onClick="window.open(this.href, this.target, 'toolbar=0 , location=0 , status=0 , menubar=0 , scrollbars=0 , resizable=1 ,left=300em,top=150em,width=800em,height=400em');">
+	<a href="busqueda_periodo_asistencia.php" target="popup">
     <i class="fa fa-search"></i>
 	</a>				
 	</button>			
@@ -105,8 +103,7 @@
 	?>
 
 	<article class="periodoAsistencia">
-			<form method="post" action="controlador_periodos_asistencia.php" target="popup" 
-				onsubmit="window.open('', 'popup', 'toolbar=NO , location=NO , status=NO , menubar=NO , scrollbars=NO , resizable=1 ,left=300em,top=150em,width=800em,height=400em');">
+			<form method="post" action="controlador_periodos_asistencia.php" target="popup" >
 				<div class="fila_periodoAsistencia col-7 col-tab-7 col-">
 					<div class="datos_periodoAsistencia">			
 					<input type="hidden" id="oid_pasis" name="oid_pasis"

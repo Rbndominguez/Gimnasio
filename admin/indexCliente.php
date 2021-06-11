@@ -10,32 +10,7 @@
 	}
 	
   	require_once("../gestionBD.php");
+	  require_once("menuCliente.php");
 ?>
 	
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="utf-8">
-  <title>Indice: Cliente</title>
-  <link href="../css/indexAdmin.css" rel="stylesheet" type="text/css">
-</head>
-
-<body>
-
-<?php
-	include_once("../header2.php");
-	include_once("menuCliente.php");
-?>
-
-<main>
-
-</main>
-<div class="pie">
-		<span><pre>Realizado por Rubén Iglesias Domínguez.©
-Junio-2021</pre></span>
-	</div>
-
-
-</body>
-</html>
 

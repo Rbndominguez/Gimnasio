@@ -24,13 +24,29 @@
   <meta charset="utf-8">
   <title>Información de la tabla de ejercicios</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <link href="../css/muestra.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/bootstrap.css">
+    <link rel="stylesheet" href="../assets/vendors/bootstrap-icons/bootstrap-icons.css">
+    <link rel="stylesheet" href="../assets/css/app.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
+	<nav class="navbar navbar-light">
+        <div class="container d-block">
+            <a href="consulta_tablas_ejercicios.php"><i class="bi bi-chevron-left"></i></a>
+            <a class="navbar-brand ms-4" href="consulta_tablas_ejercicios.php">
+                <img src="../assets/images/logo/logo2.png">
+            </a>
+        </div>
+    </nav>
+
+	<div class="container">
+        <div class="card mt-5">
+            <div class="card-header">
+                <h4 class="card-title">Datos del Monitor</h4>
+            </div>
+            <div class="card-body">
 	<?php if ($tablaEjercicio["recuperacion"] == 0) { 
 			$esRecuperacion = "normal";
 		} else {
@@ -40,7 +56,8 @@
 	
 	<?php if ($num_ejercicios > 0) { ?>
 			
-			<table class="table table-striped" style="width:100%">
+		<div class="table-responsive">
+			<table class="table table-striped mb-0">
  				<tr>
     				<th>Orden</th>
     				<th>Nombre</th> 
@@ -76,12 +93,14 @@
 								} 
    				 				?></td>
    				 			<td><?php echo $ejercicio["series"]; ?></td>
-   				 			<td><button id="quitar" name="quitar" type="submit" class="editar_fila">Quitar</button></td>
+   				 			<td><button  class="btn btn-danger" id="quitar" name="quitar" type="submit" class="editar_fila">Quitar</button></td>
  			 			</tr>
 			
 					</form>
 				<?php } ?>
 			</table>
+			</div>
+			<br>
 		<?php } ?>
 	
 	<article class="tablaEjercicio">
@@ -102,23 +121,23 @@
 				</div>
 				
 				<div id="botones_fila">
-					<button id="editar" name="editar" type="submit" class="editar_fila">
-						<img src="../images/editar_small.png" class="editar_fila" alt="Editar tablaEjercicio">
+				<button class="btn btn-outline-primary" id="editar" name="editar" type="submit" class="editar_fila">
+					<i class="fa fa-edit" class="editar_fila" alt="Editar tablaEjercicio"></i>
 					</button>
 					
-					<button id="borrar" name="borrar" type="submit" class="editar_fila">
-						<img src="../images/remove_small.png" class="editar_fila" alt="Borrar tablaEjercicio">
-					</button>
-					
-					<button id="añadir" name="añadir" type="submit" class="editar_fila">
+					<button class="btn btn-outline-danger" id="borrar" name="borrar" type="submit" class="editar_fila" >
+					<i class="fa fa-trash" class="editar_fila" alt="Borrar tablaEjercicio"></i>
+						</button>
+
+					<button class="btn btn-primary" id="añadir" name="añadir" type="submit" class="editar_fila">
 						Añadir ejercicio
 					</button>
 					
-					<button onClick="window.close();opener.location.reload();">Cerrar</button>
+					<button class="btn btn-danger" onClick="window.close();opener.location.reload();">Cerrar</button>
+					
 				</div>
 			</div>
 		</form>
 	</article>
-	
 	</body>
 </html>
