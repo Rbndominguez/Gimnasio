@@ -1,0 +1,43 @@
+#btnnuevo {
+	background-color: #22CDFF;
+	border: none;
+	padding: 5px 30px;
+	font-size: 16px;
+	cursor: pointer;
+	margin-right:17%;
+	
+  }
+  
+#btnnuevo:hover {
+	background-color: #2294FF;
+  }
+#btnbuscar {
+	background-color: #22CDFF;
+	border: none;
+	padding: 5px 30px;
+	font-size: 16px;
+	cursor: pointer;
+	margin-right:-5.5%;
+  }
+  
+#btnbuscar:hover {
+	background-color: #2294FF;
+  }
+.fa-plus:before, .fa-search:before {
+	  color:white;
+  }
+.fa-edit:before {
+	  color:black;
+	  font-size:26px;
+  }
+.fa-trash:before {
+	  color:black;
+	  font-size:27px;
+  }
+.bi-justify::before, .bi-x::before{
+color: #0033B1;
+}  
+
+i {
+	  color:white;
+  }

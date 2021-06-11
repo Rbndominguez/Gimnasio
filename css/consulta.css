@@ -1,0 +1,113 @@
+			/* Para moviles: */
+			[class*="col-"] {
+				float:left;
+				width: 100%;
+			}
+			
+			/* Para Tablets: */
+			@media only screen and (min-width: 700px) {
+				.col-tab-1 {width: 10%;}
+				.col-tab-2 {width: 20%;}
+				.col-tab-3 {width: 30%;}
+				.col-tab-4 {width: 40%;}
+				.col-tab-5 {width: 50%;}
+				.col-tab-6 {width: 60%;}
+				.col-tab-7 {width: 70%;}
+				.col-tab-8 {width: 80%;}
+				.col-tab-9 {width: 90%;}
+				.col-tab-10 {width: 100%;}
+			}
+			
+			/* Para PC: */
+			@media only screen and (min-width: 768px) {
+				.col-1 {width: 10%;}
+				.col-2 {width: 20%;}
+				.col-3 {width: 30%;}
+				.col-4 {width: 40%;}
+				.col-5 {width: 50%;}
+				.col-6 {width: 60%;}
+				.col-7 {width: 70%;}
+				.col-8 {width: 80%;}
+				.col-9 {width: 90%;}
+				.col-10 {width: 100%;}
+				
+					#mostrar{
+				padding-left:8%;
+				padding-right:8%;
+				padding-top:8%;
+				padding-bottom:8%;
+				font-size: 100%;
+				}
+				#nomostrar{
+				padding-left:2%;
+				padding-right:2%;
+				padding-top:2%;
+				padding-bottom:2%;
+				font-size: 100%;
+				}
+				#editar, #borrar{
+						margin-top: 1em;
+				}
+				.datos_producto, .datos_salario, .datos_clase, .datos_cliente, .datos_comida, .datos_dieta, .datos_ejercicio, .datos_empresaNutricion,
+				.datos_factura, .datos_medidasPeso, .datos_monitor, .datos_pago, .datos_pedido, .datos_proveedor, .datos_tablaEjercicio{
+				max-width: 20%;
+				min-width: 20%;
+				float: left;
+				margin-left:20%;
+				padding-top:2em;
+				}		
+
+			}
+
+body {
+	text-align: center;
+	font-family: Verdana;
+	font-size: 16px;
+	color: #ffffff;
+	/* background-color: #ffffff; */
+}
+
+#editar, #borrar, #buscar, #nuevo {
+	border: hidden;
+	background: rgba(0,0,0,0);
+	cursor: pointer;
+}
+
+#editar, #borrar {
+
+	margin-bottom: 3em;
+}
+
+#mostrar {
+	border:hidden;
+	color: #000000;
+	background-color: white;
+	cursor:pointer;
+	transition-duration: 0.3s;
+
+}
+#nomostrar{
+	border:hidden;
+	color: #000000;
+	background-color: white;
+}
+
+#mostrar:hover{
+	background-color: #b60000;
+}
+.enlaces {
+	display: inline;
+}
+
+
+#botones_fila{
+	float:left;
+	text-align:left;
+}
+article{
+	margin-left:33%;
+}
+#form_pag {
+	margin-left: 35%;
+	margin-right: 30%;
+}
