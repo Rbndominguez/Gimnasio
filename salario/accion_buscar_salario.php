@@ -38,15 +38,15 @@
 								<div class="nombres">' . $fecha . ' - ' . $cantidad . '€ cobrados por ' . $apellidos . ', ' . $nombre . '</div>
 							
 							</div>
-							
 							<div id="botones_fila">
-								<button id="editar" name="editar" type="submit" class="editar_fila">
-									<img src="../images/editar_small.png" class="editar_fila" alt="Editar pedido">
-								</button>
-								<button id="borrar" name="borrar" type="submit" class="editar_fila">
-									<img src="../images/remove_small.png" class="editar_fila" alt="Borrar pedido">
-								</button>
-							</div>
+									<button class="btn btn-outline-primary" id="editar" name="editar" type="submit" class="editar_fila">
+									<i class="fa fa-edit" class="editar_fila" alt="Editar salario"></i>
+									</button>
+									<button class="btn btn-outline-danger" id="borrar" name="borrar" type="submit" class="editar_fila">
+									<i class="fa fa-trash" class="editar_fila" alt="Borrar salario"></i>
+									</button>
+									</div>
+							
 						</div>
 					</form>
 					<br>

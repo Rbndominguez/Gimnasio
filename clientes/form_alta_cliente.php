@@ -68,7 +68,6 @@
             <div class="card-body">
 	
 	<?php 
-		// Mostrar los erroes de validación (Si los hay)
 		if (isset($errores) && count($errores)>0) { 
 	    	echo "<div id=\"div_errores\" class=\"error\">";
 			echo "<h6> <em>Errores en el formulario:</em></h6>";

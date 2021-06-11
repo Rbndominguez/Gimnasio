@@ -69,9 +69,9 @@
                         </div>
                         <input type="submit" name="submit" class="btn btn-primary btn-block btn-lg shadow-lg mt-5" value="Log in"></input>
                     </form>
-                    <div class="text-center mt-5 text-lg fs-4">
+                    <!-- <div class="text-center mt-5 text-lg fs-4">
                         <p><a class="font-bold" href="auth-forgot-password.html">¿Olvidaste tu contraseña?</a>.</p>
-                    </div>
+                    </div> -->
                 </div>
             </div>
             <div class="col-lg-7 d-none d-lg-block">

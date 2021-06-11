@@ -89,15 +89,13 @@
 	</nav>
 	<br>
 	<button id="btnnuevo" name="nuevo" type="submit">
-	<a href="form_crea_comida.php" target="popup"
-				onClick="window.open(this.href, this.target, 'toolbar=0 , location=0 , status=0 , menubar=0 , scrollbars=0 , resizable=1 ,left=300em,top=150em,width=800em,height=400em');">
-    <i class="fa fa-plus"></i>
+	<a href="form_crea_comida.php" target="popup">
+	<i class="fa fa-plus"></i>
 	</a>				
 	</button>
 	<button id="btnbuscar" name="buscar" type="submit">
-	<a href="busqueda_comida.php" target="popup"
-				onClick="window.open(this.href, this.target, 'toolbar=0 , location=0 , status=0 , menubar=0 , scrollbars=0 , resizable=1 ,left=300em,top=150em,width=800em,height=400em');">
-    <i class="fa fa-search"></i>
+	<a href="busqueda_comida.php" target="popup">
+	<i class="fa fa-search"></i>
 	</a>				
 	</button>
 	<br>
@@ -107,9 +105,8 @@
 	?>
 		<br>
 		<article class="comida">
-			<form method="post" action="controlador_comidas.php" target="popup" 
-				onsubmit="window.open('', 'popup', 'toolbar=NO , location=NO , status=NO , menubar=NO , scrollbars=NO , resizable=1 ,left=300em,top=150em,width=800em,height=400em');">
-				<div class="fila_comida col-7 col-tab-7 col-">
+			<form method="post" action="controlador_comidas.php" target="popup">
+			<div class="fila_comida col-7 col-tab-7 col-">
 				<div class="datos_periodoAsistencia">
 						<input type="hidden" id="oid_c" name="oid_c"
 							value="<?php echo $row['oid_c']; ?>" />

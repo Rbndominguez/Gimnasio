@@ -66,8 +66,8 @@
 									value="' . $nombre . '" />
 								<input type="hidden" id="estaBaja" name="estaBaja"
 									value="' . $estaBaja . '" />
-									
-								<button class="btn btn-outline-primary" id="mostrar" name="mostrar" type="submit" class="mostrar_fila">
+									<br>	
+								<button class="btn btn-primary" id="mostrar" name="mostrar" type="submit" class="mostrar_fila">
 									<div class="nombres">' . $apellidos . ', ' . $nombre . ' [' . $estaBaja . ']</div>
 								</button>
 					

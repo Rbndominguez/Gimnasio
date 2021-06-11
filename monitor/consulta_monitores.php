@@ -84,14 +84,12 @@
 		</nav>		
 		<br>
 		<button id="btnnuevo" name="nuevo" type="submit">
-	<a href="form_alta_monitor.php" target="popup"
-				onClick="window.open(this.href, this.target, 'toolbar=0 , location=0 , status=0 , menubar=0 , scrollbars=0 , resizable=1 ,left=300em,top=150em,width=800em,height=400em');">
-    <i class="fa fa-plus"></i>
+	<a href="form_alta_monitor.php" target="popup">
+	    <i class="fa fa-plus"></i>
 	</a>				
 	</button>
 	<button id="btnbuscar" name="buscar" type="submit">
-	<a href="busqueda_monitor.php" target="popup"
-				onClick="window.open(this.href, this.target, 'toolbar=0 , location=0 , status=0 , menubar=0 , scrollbars=0 , resizable=1 ,left=300em,top=150em,width=800em,height=400em');">
+	<a href="busqueda_monitor.php" target="popup">
     <i class="fa fa-search"></i>
 	</a>				
 	</button>	
@@ -106,8 +104,7 @@
 	?>
 
 	<article class="monitor">
-		<form method="post" action="controlador_monitores.php" target="popup"
-			onClick="window.open(this.href, this.target, 'toolbar=0 , location=0 , status=0 , menubar=0 , scrollbars=0 , resizable=1 ,left=300em,top=150em,width=700em,height=550em');">
+		<form method="post" action="controlador_monitores.php" target="popup">
 			<div class="fila_monitor col-7 col-tab-7 col-">
 			<div class="datos_periodoAsistencia">	
 					<input type="hidden" id="dniMonitor" name="dniMonitor"

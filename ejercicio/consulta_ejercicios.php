@@ -87,14 +87,12 @@ $dbconn = crearConexionPG();
 		</nav>		
 		<br>
 		<button id="btnnuevo" name="nuevo" type="submit">
-	<a href="form_crea_ejercicio.php" target="popup"
-				onClick="window.open(this.href, this.target, 'toolbar=0 , location=0 , status=0 , menubar=0 , scrollbars=0 , resizable=1 ,left=300em,top=150em,width=800em,height=400em');">
-    <i class="fa fa-plus"></i>
+	<a href="form_crea_ejercicio.php" target="popup">
+	<i class="fa fa-plus"></i>
 	</a>				
 	</button>
 	<button id="btnbuscar" name="buscar" type="submit">
-	<a href="busqueda_ejercicio.php" target="popup"
-				onClick="window.open(this.href, this.target, 'toolbar=0 , location=0 , status=0 , menubar=0 , scrollbars=0 , resizable=1 ,left=300em,top=150em,width=800em,height=400em');">
+	<a href="busqueda_ejercicio.php" target="popup">
     <i class="fa fa-search"></i>
 	</a>				
 	</button>	
@@ -108,8 +106,7 @@ $dbconn = crearConexionPG();
 	?>
 	<br>
 	<article class="ejercicio">
-		<form method="post" action="controlador_ejercicios.php" target="popup" 
-				onsubmit="window.open('', 'popup', 'toolbar=NO , location=NO , status=NO , menubar=NO , scrollbars=NO , resizable=1 ,left=300em,top=150em,width=800em,height=500em');">
+		<form method="post" action="controlador_ejercicios.php" target="popup" >
 			<div class="fila_ejercicio col-7 col-tab-7 col-">
 			<div class="datos_periodoAsistencia">		
 					<input type="hidden" id="oid_e" name="oid_e"

@@ -15,7 +15,7 @@
 		if ($filas == NULL) {
 			$mensaje = "<p>No hay ningún monitor con ese nombre y/o apellidos</p>";
 		} else {
-			echo 'Resultados para <strong>' . $consultaBusqueda . '</strong>';
+			echo '<br>Resultados para <strong>' . $consultaBusqueda . '</strong>';
 			
 			foreach($filas as $fila) {
 				$dniMonitor = $fila['dnimonitor'];
@@ -47,20 +47,20 @@
 										value="' . $fechaFin . '" />
 									
 									<br>
-									<button id="mostrar" name="mostrar" type="submit" class="mostrar_fila">
+									<button class="btn btn-primary" id="mostrar" name="mostrar" type="submit" class="mostrar_fila">
 										<div class="nombres">' . $apellidos . ', ' . $nombre . '</div>
 									</button>
 					
 								</div>
-				
+								<br>
 								<div id="botones_fila">
-									<button id="editar" name="editar" type="submit" class="editar_fila">
-										<img src="../images/editar_small.png" class="editar_fila" alt="Editar monitor">
-									</button>
-									<button id="borrar" name="borrar" type="submit" class="editar_fila">
-										<img src="../images/remove_small.png" class="editar_fila" alt="Borrar monitor">
-									</button>
-								</div>
+								<button class="btn btn-outline-primary" id="editar" name="editar" type="submit" class="editar_fila">
+									<i class="fa fa-edit" class="editar_fila" alt="Editar monitor"></i>
+								</button>
+								<button class="btn btn-outline-danger" id="borrar" name="borrar" type="submit" class="editar_fila">
+									<i class="fa fa-trash" class="editar_fila" alt="Borrar monitor"></i>
+								</button>
+							</div>
 							</div>
 						</form>
 					</article>';

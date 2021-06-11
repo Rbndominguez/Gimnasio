@@ -56,7 +56,6 @@
             </div>
             <div class="card-body">
 	<form accept-charset="utf-8" method="POST">
-		<p><b>Buscar </b><em>(Pulsa Enter para limpiar la búsqueda)</em></p>
 		<input type="text" name="busqueda" size="50" id="busqueda" value="" placeholder="" maxlength="50" autocomplete="off" onkeyup="buscar();" autofocus />
 	</form>
 	<br>

@@ -50,12 +50,12 @@
 									</div>
 					
 									<div id="botones_fila">
-										<button id="editar" name="editar" type="submit" class="editar_fila">
-											<img src="../images/editar_small.png" class="editar_fila" alt="Editar ejercicio">
-										</button>
-										<button id="borrar" name="borrar" type="submit" class="editar_fila">
-											<img src="../images/remove_small.png" class="editar_fila" alt="Borrar ejercicio">
-										</button>
+									<button class="btn btn-outline-primary" id="editar" name="editar" type="submit" class="editar_fila">
+									<i class="fa fa-edit" class="editar_fila" alt="Editar ejercicio"></i>
+									</button>
+									<button class="btn btn-outline-danger" id="borrar" name="borrar" type="submit" class="editar_fila">
+									<i class="fa fa-trash" class="editar_fila" alt="Borrar ejercicio"></i>
+									</button>
 									</div>
 								</div>
 							</form>
@@ -86,12 +86,12 @@
 									</div>
 					
 									<div id="botones_fila">
-										<button id="editar" name="editar" type="submit" class="editar_fila">
-											<img src="../images/editar_small.png" class="editar_fila" alt="Editar ejercicio">
-										</button>
-										<button id="borrar" name="borrar" type="submit" class="editar_fila">
-											<img src="../images/remove_small.png" class="editar_fila" alt="Borrar ejercicio">
-										</button>
+									<button class="btn btn-outline-primary" id="editar" name="editar" type="submit" class="editar_fila">
+									<i class="fa fa-edit" class="editar_fila" alt="Editar ejercicio"></i>
+									</button>
+									<button class="btn btn-outline-danger" id="borrar" name="borrar" type="submit" class="editar_fila">
+									<i class="fa fa-trash" class="editar_fila" alt="Borrar ejercicio"></i>
+									</button>
 									</div>
 								</div>
 							</form>
