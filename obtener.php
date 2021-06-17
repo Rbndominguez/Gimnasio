@@ -1,22 +1,49 @@
 <?php
-include_once "gestionBD.php";
 
-$dbconn = crearConexionPG();
-if (isset($_GET["page"])) { $page  = $_GET["page"]; } else { $page=1; }; 
+require_once("gestionBD.php");
+require_once("clientes/gestionarClientes.php");
 
-$records = 10; // change here for records per page
+// $usuario = $_POST["usuario"];
+// $passwd = $_POST["passwd"];
+// $passhash = password_hash($passwd, PASSWORD_BCRYPT);
+// $sentencia = $basedatos->prepare("INSERT INTO USUARIOS(usuario,password) VALUES (?, ?);");
+// $resultado = $sentencia->execute([$usuario, $passhash]);
+session_start();
+$conexion = crearConexionBD();
+$sentencia = $conexion->query("SELECT dni, passwd, usr, password FROM clientes FULL JOIN adminusr ON clientes.dni=adminusr.usr;");
+$credenciales= $sentencia->fetchAll(PDO::FETCH_OBJ);
 
-$start_from = ($page-1) * $records;
+// print_r($credenciales);
 
-$qry = pg_query($dbconn, "select count(*) as total from comidas"); 
-$row_sql = pg_fetch_row($qry); 
-$total_records = $row_sql[0]; 
-$total_pages = ceil($total_records / $records);
+$pass2 = "Usuario.20";
+$pass1 = "hola";
+$passhash = password_hash($pass1, PASSWORD_BCRYPT);
+print_r($passhash);
+print_r(password_verify($pass2, $passhash));
 
-$select = pg_query($dbconn, "select * from comidas limit $records offset $start_from");
-while($row = pg_fetch_assoc($select )){
-    echo $row['oid_c'].' | '.$row['nombrecomida'].' | '.$row['descripcion'].'<br />';
-}
+
+
+
+
+
+
+
+// $dbconn = crearConexionPG();
+// if (isset($_GET["page"])) { $page  = $_GET["page"]; } else { $page=1; }; 
+
+// $records = 10; // change here for records per page
+
+// $start_from = ($page-1) * $records;
+
+// $qry = pg_query($dbconn, "select count(*) as total from comidas"); 
+// $row_sql = pg_fetch_row($qry); 
+// $total_records = $row_sql[0]; 
+// $total_pages = ceil($total_records / $records);
+
+// $select = pg_query($dbconn, "select * from comidas limit $records offset $start_from");
+// while($row = pg_fetch_assoc($select )){
+//     echo $row['oid_c'].' | '.$row['nombrecomida'].' | '.$row['descripcion'].'<br />';
+// }
 /*$sentencia = $conexion->query("select * from productos");
 $registros = $sentencia->fetchAll(PDO::FETCH_OBJ);
 

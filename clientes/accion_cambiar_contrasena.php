@@ -46,20 +46,19 @@
 		$_SESSION["errores"] = $errores;
 		header('Location: form_cambiar_contrasena.php');
 		
-	} else if($contrasenaVieja != $contrasenaAntigua) {
+	} else if (!password_verify($contrasenaVieja, $contrasenaAntigua)){
+	// else if($contrasenaVieja != $contrasenaAntigua) 
 		$errores[] = "<p>La contraseña antigua no es correcta</p>";
 		$_SESSION["errores"] = $errores;
 		header('Location: form_cambiar_contrasena.php');
-	} else if ($contrasenaVieja == $contrasenaNueva) {
-		$errores[] = "<p>La contraseña nueva no debe coincidir con la antigua</p>";
-		$_SESSION["errores"] = $errores;
-		header('Location: form_cambiar_contrasena.php');
-	} else if ($contrasenaNueva != $confirmpassNueva) {
+	}
+		else if ($contrasenaNueva != $confirmpassNueva) {
 		$errores[] = "<p>La contraseña nueva no coincide con la confirmación</p>";
 		$_SESSION["errores"] = $errores;
 		header('Location: form_cambiar_contrasena.php');
 	} else {
-		$resultado = modifica_password_cliente($conexion, $dni, $contrasenaNueva);
+		$passNueva = password_hash($contrasenaNueva, PASSWORD_BCRYPT);
+		$resultado = modifica_password_cliente($conexion, $dni, $passNueva);
 		if($resultado <> true){
 			$_SESSION["excepcion"] = $resultado;
 			$_SESSION["destino"] = "clientes/form_cambiar_contrasena.php";

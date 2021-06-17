@@ -52,7 +52,7 @@
 	<div class="container">
         <div class="card mt-5">
             <div class="card-header">
-                <h4 class="card-title">Datos del Monitor</h4>
+                <h4 class="card-title">Datos de la dieta</h4>
             </div>
             <div class="card-body">
 	<p><b><?php echo $dieta["nombreDieta"] . ": " . $dieta["descripcion"] . " [" . $dieta["duracion"] . "]";?>

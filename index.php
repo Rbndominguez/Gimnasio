@@ -3,32 +3,65 @@
   	
   	require_once("gestionBD.php");
  	require_once("clientes/gestionarClientes.php");
+
+     if(isset($_POST["dni"])) {
+    $conexion = crearConexionBD();
+    $dni = $_POST["dni"];
+    $pass = $_POST["pass"];
+     $passhash = password_hash($pass, PASSWORD_BCRYPT);
+     $sentencia = $conexion->query("SELECT dni, passwd, usr, password FROM clientes FULL JOIN adminusr ON clientes.dni=adminusr.usr;");  
+     $credenciales= $sentencia->fetchAll(PDO::FETCH_OBJ);
+
+     print_r($credenciales);
+     foreach ($credenciales as $credencial){
+           $usuariodb = $credencial -> usr;
+           $passdb = $credencial -> password;
+           $clientedb = $credencial -> dni;
+           $clientepassdb = $credencial -> passwd;
+           cerrarConexionBD($conexion);
+     if($usuariodb = $dni || $clientedb = $dni && password_verify($pass, $passdb) || password_verify($pass, $clientepassdb)) {
+           $_SESSION['login'] = $dni;
+           if ($_SESSION['login'] == 'admin'){
+            header("Location: admin/indexAdmin.php");
+           }
+           else{
+            header("Location: admin/indexCliente.php");
+             }
+            }
+     else{
+        $login = "Error";
+     }
+    }
+}
+
+
+
 	
-	if(isset($_POST["dni"])) {
+	// if(isset($_POST["dni"])) {
 
-		$dni = $_POST["dni"];
-		$pass = $_POST["pass"];
+	// 	$dni = $_POST["dni"];
+	// 	$pass = $_POST["pass"];
 		
-		if($dni == "admin" && $pass == "1234"){
-			$_SESSION["login"] = $dni;
-			header("Location: admin/indexAdmin.php");
-		} else {
+	// 	if($dni == "admin" && $pass == "1234"){
+	// 		$_SESSION["login"] = $dni;
+	// 		header("Location: admin/indexAdmin.php");
+	// 	} else {
 
-			$conexion = crearConexionBD();
+	// 		$conexion = crearConexionBD();
 
-			$num_cliente = consultarCliente($conexion, $dni, $pass);
+	// 		$num_cliente = consultarCliente($conexion, $dni, $pass);
 
-			cerrarConexionBD($conexion);
+	// 		cerrarConexionBD($conexion);
 
-			if($num_cliente == 1) {
-				$_SESSION["login"] = $dni;
+	// 		if($num_cliente == 1) {
+	// 			$_SESSION["login"] = $dni;
 
-				header("Location: admin/indexCliente.php");
-			} else {	
-				$login = "Error";
-			}
-		}
-	}
+	// 			header("Location: admin/indexCliente.php");
+	// 		} else {	
+	// 			$login = "Error";
+	// 		}
+	// 	}
+	// }
 ?>
 
 <!DOCTYPE html>
@@ -69,9 +102,6 @@
                         </div>
                         <input type="submit" name="submit" class="btn btn-primary btn-block btn-lg shadow-lg mt-5" value="Log in"></input>
                     </form>
-                    <!-- <div class="text-center mt-5 text-lg fs-4">
-                        <p><a class="font-bold" href="auth-forgot-password.html">¿Olvidaste tu contraseña?</a>.</p>
-                    </div> -->
                 </div>
             </div>
             <div class="col-lg-7 d-none d-lg-block">

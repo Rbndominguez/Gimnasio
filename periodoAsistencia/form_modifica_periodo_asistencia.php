@@ -43,7 +43,7 @@ session_start();
     <div class="container">
         <div class="card mt-5">
             <div class="card-header">
-                <h4 class="card-title">Datos del Salario Mensual</h4>
+                <h4 class="card-title">Datos del Periodo de Asistencia</h4>
             </div>
             <div class="card-body">
 		<form id="form_modifica_periodo_asistencia" method="post" action="accion_modificar_periodo_asistencia.php" novalidate>

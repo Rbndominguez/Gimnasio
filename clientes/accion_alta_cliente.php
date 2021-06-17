@@ -10,12 +10,15 @@
 		$nuevoCliente["direccion"] = $_POST["direccion"];
 		$nuevoCliente["codigoPostal"] = $_POST["codigoPostal"];
 		$nuevoCliente["email"] = $_POST["email"];
-		$nuevoCliente["password"] = $_POST["password"];
-		$nuevoCliente["confirmPassword"] = $_POST["confirmPassword"];
+		$nuevoCliente["passwd"] = $_POST["password"];
+		$nuevoCliente["confirmPasswd"] = $_POST["confirmPassword"];
 		$nuevoCliente["telefono"] = $_POST["telefono"];
 		$nuevoCliente["lesiones"] = $_POST["lesiones"];
 		$nuevoCliente["esEstudiante"] = $_POST["esEstudiante"];
 		$nuevoCliente["entrenamientoPersonal"] = $_POST["entrenamientoPersonal"];
+		$nuevoCliente["password"] = password_hash($_POST["password"],PASSWORD_BCRYPT);
+
+
 	}
 	else // En caso contrario, vamos al formulario
 		header("Location: form_alta_cliente.php");
@@ -61,11 +64,11 @@
 		}
 		
 		// Validación de la contraseña
-		if (($nuevoCliente["password"] == "") || (strlen($nuevoCliente["password"]) < 8)) {
+		if (($nuevoCliente["passwd"] == "") || (strlen($nuevoCliente["passwd"]) < 8)) {
 			$errores[] = "<p>Contraseña no válida: debe tener al menos 8 caracteres</p>";
-		} else if (!preg_match("/[a-z]+/", $nuevoCliente["password"]) || !preg_match("/[A-Z]+/", $nuevoCliente["password"]) || !preg_match("/[0-9]+/", $nuevoCliente["password"])) {
+		} else if (!preg_match("/[a-z]+/", $nuevoCliente["passwd"]) || !preg_match("/[A-Z]+/", $nuevoCliente["passwd"]) || !preg_match("/[0-9]+/", $nuevoCliente["passwd"])) {
 			$errores[] = "<p>Contraseña no válida: debe contener letras mayúsculas y minúsculas y dígitos</p>";
-		} else if ($nuevoCliente["password"] != $nuevoCliente["confirmPassword"]) {
+		} else if ($nuevoCliente["passwd"] != $nuevoCliente["confirmPasswd"]) {
 			$errores[] = "<p>La confirmación de contraseña no coincide con la contraseña</p>";
 		}
 		

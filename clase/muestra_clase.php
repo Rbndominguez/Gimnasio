@@ -44,7 +44,7 @@
     <div class="container">
         <div class="card mt-5">
             <div class="card-header">
-                <h4 class="card-title">Datos del cliente</h4>
+                <h4 class="card-title">Datos de la clase</h4>
             </div>
             <div class="card-body">
 

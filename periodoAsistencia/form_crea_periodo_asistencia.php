@@ -51,7 +51,7 @@
     <div class="container">
         <div class="card mt-5">
             <div class="card-header">
-                <h4 class="card-title">Datos del monitor</h4>
+                <h4 class="card-title">Datos del Periodo de Asistencia</h4>
             </div>
             <div class="card-body">
 		<?php 

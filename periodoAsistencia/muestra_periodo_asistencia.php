@@ -42,7 +42,7 @@
     <div class="container">
         <div class="card mt-5">
             <div class="card-header">
-                <h4 class="card-title">Datos del Pago</h4>
+                <h4 class="card-title">Datos del Periodo de Asistencia</h4>
             </div>
             <div class="card-body">
 	<p><b>Fecha de Inicio: </b><?php echo $periodoAsistencia["fechaInicio"];?></p>
