@@ -47,7 +47,6 @@
 		header('Location: form_cambiar_contrasena.php');
 		
 	} else if (!password_verify($contrasenaVieja, $contrasenaAntigua)){
-	// else if($contrasenaVieja != $contrasenaAntigua) 
 		$errores[] = "<p>La contraseña antigua no es correcta</p>";
 		$_SESSION["errores"] = $errores;
 		header('Location: form_cambiar_contrasena.php');

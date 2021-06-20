@@ -1,9 +1,6 @@
 <?php 
 
-#Aquí estan las funciones de gestión de monitores de la capa de acceso a datos
-#----------------------------#
-#	  Gestion Monitores		 #
-#----------------------------#
+
 function alta_monitor($conexion, $monitor) {
 	$fechaContratacion = date('d/m/Y', strtotime($monitor["fechaContratacion"]));
 	try {

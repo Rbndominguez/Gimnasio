@@ -11,7 +11,6 @@
 	} else
 		header("Location:form_crea_ejercicio.php");
 	
-	// ABRIR LA CONEXIÓN A LA BASE DE DATOS
 	$conexion = crearConexionBD();
 ?>
 
@@ -54,7 +53,7 @@
 </body>
 </html>
 <?php
-	// DESCONECTAR LA BASE DE DATOS
+
 	cerrarConexionBD($conexion);
 ?>
 

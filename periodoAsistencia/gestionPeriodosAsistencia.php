@@ -1,9 +1,5 @@
 <?php
-#Aquí están las funciones de gestión de periodos de asistencia de la capa de acceso a datos
 
-#------------------------------#
-#Gestión Periodos de Asistencia#
-#------------------------------#
 function crea_periodo_asistencia($conexion, $periodoAsistencia){
 	$fecha = date('d/m/Y', strtotime($periodoAsistencia["fechaInicio"]));
 	try{

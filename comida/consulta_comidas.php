@@ -26,7 +26,6 @@
 	$conexion = crearConexionBD();
 	$dbconn = crearConexionPG();
 	
-	//$query = 'SELECT * FROM COMIDAS ORDER BY nombrecomida';
 
 	$qry = pg_query($dbconn, "select count(*) as total from comidas"); 
 	$row_sql = pg_fetch_row($qry); 

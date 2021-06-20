@@ -1,10 +1,5 @@
 <?php
 
-#Aquí estan las funciones de gestión de pagos de la capa de acceso a datos
-
-#--------------------------------#
-#	  		Gestión Pagos		 #
-#--------------------------------#
 
 function crea_pagos_pasis($conexion, $pagos) {
 	$fecha = date('d/m/Y', strtotime($pagos["fechaPago"]));

@@ -1,9 +1,5 @@
 <?php
-#Aquí estan las funciones de gestión de salarios de la capa de acceso a datos
 
-#----------------------------------------#
-#	  		Gestión Salarios   			 #
-#----------------------------------------#
 function crea_salarios($conexion, $salarios){
 	$fecha = date('d/m/Y', strtotime($salarios["fecha"]));
 	try{

@@ -34,34 +34,6 @@
     }
 }
 
-
-
-	
-	// if(isset($_POST["dni"])) {
-
-	// 	$dni = $_POST["dni"];
-	// 	$pass = $_POST["pass"];
-		
-	// 	if($dni == "admin" && $pass == "1234"){
-	// 		$_SESSION["login"] = $dni;
-	// 		header("Location: admin/indexAdmin.php");
-	// 	} else {
-
-	// 		$conexion = crearConexionBD();
-
-	// 		$num_cliente = consultarCliente($conexion, $dni, $pass);
-
-	// 		cerrarConexionBD($conexion);
-
-	// 		if($num_cliente == 1) {
-	// 			$_SESSION["login"] = $dni;
-
-	// 			header("Location: admin/indexCliente.php");
-	// 		} else {	
-	// 			$login = "Error";
-	// 		}
-	// 	}
-	// }
 ?>
 
 <!DOCTYPE html>

@@ -1,7 +1,7 @@
 <?php
 	session_start();
 	
-	// Si no existen datos del formulario en la sesión, se crea una entrada con valores por defecto
+
 	if (!isset($_SESSION['form_crea_ejercicio'])) {
 		$form_crea_ejercicio['nombreEjercicio'] = "";
 		$form_crea_ejercicio['descripcion'] = "";
@@ -12,11 +12,11 @@
 	
 		$_SESSION['form_crea_ejercicio'] = $form_crea_ejercicio;
 	}
-	// Si ya existían valores, los cogemos para inicializar el formulario
+
 	else
 		$form_crea_ejercicio = $_SESSION['form_crea_ejercicio'];
 	
-	// Si hay errores de validación, hay que mostrarlos y marcar los campos (El estilo viene dado y ya se explicará)
+
 	if (isset($_SESSION["errores"])) {
 		$errores = $_SESSION["errores"];
 	}

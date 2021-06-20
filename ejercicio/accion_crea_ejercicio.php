@@ -23,14 +23,14 @@
 		header('Location: exito_crea_ejercicio.php');
 
 
-	// Validación en servidor del formulario de alta de usuario
+
 
 	function validarDatosEjercicio($nuevoEjercicio){
-		// Validación del Nombre del Ejercicio			
+			
 		if($nuevoEjercicio["nombreEjercicio"]=="") 
 			$errores[] = "<p>El nombre del ejercicio no puede estar vacío</p>";
 		
-		// Validación de la Descripcion
+
 		if($nuevoEjercicio["descripcion"]=="") 
 			$errores[] = "<p>El descripcion no puede estar vacío</p>";
 		

@@ -2,7 +2,7 @@
 	
 	session_start();
 	
-	//Importar la librería de la conexión a BD y la del crud de usuarios
+
 	require_once("../gestionBD.php");
 	require_once("gestionComidas.php");
 	
@@ -13,7 +13,7 @@
 	}
 	else header("Location: form_crea_comida.php");
 	
-	//Abrir la conexión con la base de datos
+
 	$conexion = crearConexionBD();
 ?>
 
@@ -26,15 +26,15 @@
 
 <body>
 	<?php
-	//include_once("index.php");
+
 	?>
 	
 	<main>
 		<?php 
-		//Invocar a la funcion de crea comida
+
 		if(crea_comida($conexion, $nuevaComida)){
 		?>
-		<!--Mensaje de exito-->
+
 		<div id="div_exito">
 			<h1>Se ha registrado correctamente la comida: <?php echo $nuevaComida["nombreComida"]; ?></h1>
 			<script language="javascript"> 
@@ -60,6 +60,6 @@
 </body>	
 </html>
 <?php
-	//Desconectar la base de datos
+
 	cerrarConexionBD($conexion);
 ?>

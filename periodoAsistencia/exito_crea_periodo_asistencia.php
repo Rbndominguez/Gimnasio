@@ -2,13 +2,11 @@
 	
 	session_start();
 	
-	//Importar la librería de la conexión a BD y la del crud de usuarios
+
 	require_once("../gestionBD.php");
 	require_once("gestionPeriodosAsistencia.php");
 	
-	// COMPROBAR QUE EXISTE LA SESIÓN CON LOS DATOS DEL FORMULARIO YA VALIDADOS
-	// RECOGER LOS DATOS Y ANULAR LOS DATOS DE SESIÓN (FORMULARIO Y ERRORES)
-	// EN OTRO CASO HAY QUE DERIVAR AL FORMULARIO
+
 	
 	if(isset($_SESSION["form_crea_periodo_asistencia"])){
 		$nuevoPeriodoAsistencia = $_SESSION["form_crea_periodo_asistencia"];
@@ -17,7 +15,7 @@
 	}
 	else Header("Location: form_crea_periodo_asistencia.php");
 	
-	//Abrir la conexión con la base de datos
+
 	$conexion = crearConexionBD();
 ?>
 
@@ -30,15 +28,15 @@
 
 <body>
 	<?php
-	//include_once("index.php");
+
 	?>
 	
 	<main>
 		<?php 
-		//Invocar a la funcion de crea periodo de asistencia
+
 		if(crea_periodo_asistencia($conexion, $nuevoPeriodoAsistencia)){
 		?>
-		<!--Mensaje de exito-->
+
 		<div id="div_exito">
 			<h1>Se ha registrado correctamente el periodo de asistencia con fecha de inicio: <?php echo $nuevoPeriodoAsistencia["fechaInicio"]; ?></h1>
 			<script language="javascript"> 
@@ -65,6 +63,6 @@
 </body>	
 </html>
 <?php
-//Desconectar la base de datos
+
 cerrarConexionBD($conexion);
 ?>

@@ -1,10 +1,5 @@
 <?php
 
-#Aquí estan las funciones de gestión de tablas de ejercicios de la capa de acceso a datos
-
-#----------------------------------------#
-#	  Gestión Tabla de ejercicios		 #
-#----------------------------------------#
 function crea_tabla_ejercicio($conexion, $tablaEjercicio) {
 	try {
 		$consulta = "CALL CREA_TABLAS_EJERCICIOS (:nombre, :descripcion, :duracion, :recuperacion)";

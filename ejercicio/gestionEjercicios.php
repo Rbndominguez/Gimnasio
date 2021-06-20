@@ -1,9 +1,5 @@
 <?php
-#Aquí están las funciones de gestión de ejercicios de la capa de acceso a datos
 
-#----------------------------#
-#	  Gestión Ejercicios	 #
-#----------------------------#
 
 function crea_ejercicios($conexion, $ejercicio){
 	try{

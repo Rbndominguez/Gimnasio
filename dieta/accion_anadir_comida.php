@@ -23,6 +23,6 @@
 		else {
 			header("Location: muestra_dieta.php");
 		}
-	} else// Se ha tratado de acceder directamente a este PHP
+	} else
 		header("Location: consulta_dietas.php");
 ?>

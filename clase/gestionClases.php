@@ -1,10 +1,5 @@
 <?php
 
-#Aquí estan las funciones de gestión de clases de la capa de acceso a datos
-
-#----------------------------#
-#	  Gestión Clases		 #
-#----------------------------#
 function crea_clase($conexion, $clase) {
 	try {
 		$consulta = "CALL CREA_CLASES(:nombreClase, :horario, :dniMonitor, :sala)";

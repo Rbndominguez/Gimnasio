@@ -3,11 +3,6 @@
 function crearConexionBD() {
 
 	$DatosConexion = parse_ini_file("conf_BD.ini", true);
-	/*$servidor = $DatosConexion[gimnasio]["servidor"];
-	$bd = $DatosConexion[gimnasio]["bd"];
-	$user = $DatosConexion[gimnasio]["usuario"];
-	$password = $DatosConexion[gimnasio]["password"];
-	$puerto = $DatosConexion[gimnasio]["puerto"];*/
 	$servidor = "127.0.0.1";
 	$bd = "proyecto";
 	$user = "postgres";

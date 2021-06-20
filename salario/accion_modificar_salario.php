@@ -12,14 +12,14 @@
 		require_once("../gestionBD.php");
 		require_once("gestionSalarios.php");
 		
-		// CREAR LA CONEXIÓN A LA BASE DE DATOS
+
 		$conexion = crearConexionBD();
-		// INVOCAR "MODIFICAR_TITULO"
+
 		$resultado = modifica_salarios($conexion, $salarioModificado);
-		// CERRAR LA CONEXIÓN
+	
 		cerrarConexionBD($conexion);
 		
-		// SI LA FUNCIÓN RETORNÓ UN MENSAJE DE EXCEPCIÓN, ENTONCES REDIRIGIR A "EXCEPCION.PHP"
+	
 		if($resultado <> true){
 			$_SESSION["excepcion"] = $resultado;
 			$_SESSION["destino"] = "consulta_salarios.php";
@@ -41,7 +41,7 @@
 			</script>';
 		}
 	} 
-	else // Se ha tratado de acceder directamente a este PHP 
+	else 
 		header("Location: consulta_salarios.php");
 
 ?>

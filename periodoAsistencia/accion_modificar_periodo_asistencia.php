@@ -15,13 +15,11 @@
 		require_once("../gestionBD.php");
 		require_once("gestionPeriodosAsistencia.php");
 		
-		// CREAR LA CONEXIÓN A LA BASE DE DATOS
 		$conexion = crearConexionBD();
 		$resultado = modifica_periodo_asistencia($conexion, $periodoAsistenciaModificado);
-		// CERRAR LA CONEXIÓN
+
 		cerrarConexionBD($conexion);
-		
-		// SI LA FUNCIÓN RETORNÓ UN MENSAJE DE EXCEPCIÓN, ENTONCES REDIRIGIR A "EXCEPCION.PHP"
+
 		if($resultado <> true){
 			$_SESSION["excepcion"] = $resultado;
 			$_SESSION["destino"] = "consulta_periodos_asistencias.php";
@@ -35,7 +33,7 @@
 			header("Location: muestra_periodo_asistencia.php");
 		}
 	} 
-	else // Se ha tratado de acceder directamente a este PHP 
+	else 
 		header("Location: consulta_periodos_asistencias.php");
 
 ?>

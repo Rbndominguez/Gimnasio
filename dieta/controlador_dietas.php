@@ -22,10 +22,6 @@
 			header("Location: busqueda_anadir_comida.php"); 
 		if (isset($_POST["quitar"])) 
 			header("Location: accion_quitar_comida.php"); 
-		// if (isset($_POST["asignarEN"])) 
-		// 	header("Location: busqueda_asignar_empresa.php"); 
-		// if (isset($_POST["quitarEN"])) 
-		// 	header("Location: accion_quitar_empresa.php"); 
 	}
 	else 
 		header("Location: consulta_dietas.php");

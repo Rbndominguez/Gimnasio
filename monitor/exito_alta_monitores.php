@@ -2,13 +2,10 @@
 	
 	session_start();
 	
-	//Importar la librería de la conexión a BD y la del crud de usuarios
+
 	require_once("../gestionBD.php");
 	require_once("gestionMonitores.php");
-	
-	// COMPROBAR QUE EXISTE LA SESIÓN CON LOS DATOS DEL FORMULARIO YA VALIDADOS
-	// RECOGER LOS DATOS Y ANULAR LOS DATOS DE SESIÓN (FORMULARIO Y ERRORES)
-	// EN OTRO CASO HAY QUE DERIVAR AL FORMULARIO
+
 	
 	if(isset($_SESSION["form_alta_monitor"])){
 		$monitor = $_SESSION["form_alta_monitor"];
@@ -17,7 +14,7 @@
 	}
 	else header("Location: form_alta_monitor.php");
 	
-	//Abrir la conexión con la base de datos
+
 	$conexion = crearConexionBD();
 ?>
 
@@ -29,16 +26,13 @@
 </head>
 
 <body>
-	<?php
-	//include_once("index.php");
-	?>
 	
 	<main>
 		<?php 
-		//Invocar a la funcion de alta monitor
+
 		if(alta_monitor($conexion, $monitor)){
 		?>
-		<!--Mensaje de bienvendia-->
+
 		<div id="div_exito">
 			<h1>Se ha registrado correctamente al monitor: <?php echo $monitor["apellidos"] . ", " . $monitor["nombre"]; ?></h1>
 			<script language="javascript"> 
@@ -65,6 +59,6 @@
 </body>	
 </html>
 <?php
-//Desconectar la base de datos
+
 cerrarConexionBD($conexion);
 ?>

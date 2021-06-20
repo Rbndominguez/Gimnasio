@@ -1,9 +1,5 @@
 <?php
-#Aquí están las funciones de gestión de comidas de la capa de acceso a datos
 
-#----------------------------#
-#	   Gestión Comidas  	 #
-#----------------------------#
 function crea_comida($conexion, $comida){
 	try{
 		$consulta = "CALL CREA_COMIDAS(:nombreComida,:descripcion)";

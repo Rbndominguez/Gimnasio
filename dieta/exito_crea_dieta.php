@@ -1,14 +1,11 @@
 <?php
 	
 	session_start();
-	
-	//Importar la librería de la conexión a BD y la del crud de usuarios
+
 	require_once("../gestionBD.php");
 	require_once("gestionDietas.php");
 	
-	// COMPROBAR QUE EXISTE LA SESIÓN CON LOS DATOS DEL FORMULARIO YA VALIDADOS
-	// RECOGER LOS DATOS Y ANULAR LOS DATOS DE SESIÓN (FORMULARIO Y ERRORES)
-	// EN OTRO CASO HAY QUE DERIVAR AL FORMULARIO
+
 	
 	if(isset($_SESSION["form_crea_dieta"])){
 		$nuevaDieta = $_SESSION["form_crea_dieta"];
@@ -17,7 +14,6 @@
 	}
 	else header("Location: form_crea_dieta.php");
 	
-	//Abrir la conexión con la base de datos
 	$conexion = crearConexionBD();
 ?>
 
@@ -30,15 +26,14 @@
 
 <body>
 	<?php
-	//include_once("index.php");
+
 	?>
 	
 	<main>
 		<?php 
-		//Invocar a la funcion de creacion de dieta
+
 			if(crea_dieta($conexion, $nuevaDieta)){
 		?>
-			<!--Mensaje de éxito-->
 			<div id="div_exito">
 				<h1>Se ha registrado correctamente la dieta: <?php echo $nuevaDieta["nombreDieta"]; ?></h1>
 				<script language="javascript"> 
@@ -66,6 +61,5 @@
 </body>	
 </html>
 <?php
-	//Desconectar la base de datos
 	cerrarConexionBD($conexion);
 ?>

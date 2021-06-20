@@ -21,6 +21,6 @@
 		else {
 			header("Location: muestra_cliente.php");
 		}
-	} else// Se ha tratado de acceder directamente a este PHP
+	} else
 		header("Location: consulta_clientes.php");
 ?>

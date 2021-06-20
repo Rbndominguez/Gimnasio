@@ -2,13 +2,11 @@
 	
 	session_start();
 	
-	//Importar la librería de la conexión a BD y la del crud de usuarios
+
 	require_once("../gestionBD.php");
 	require_once("gestionPagos.php");
 	
-	// COMPROBAR QUE EXISTE LA SESIÓN CON LOS DATOS DEL FORMULARIO YA VALIDADOS
-	// RECOGER LOS DATOS Y ANULAR LOS DATOS DE SESIÓN (FORMULARIO Y ERRORES)
-	// EN OTRO CASO HAY QUE DERIVAR AL FORMULARIO
+
 	
 	if(isset($_SESSION["form_crea_pagos_pasis"])){
 		$pagosPasis = $_SESSION["form_crea_pagos_pasis"];
@@ -16,8 +14,7 @@
 		unset($_SESSION["errores"]);
 	}
 	else Header("Location: form_crea_pagos_pasis.php");
-	
-	//Abrir la conexión con la base de datos
+
 	$conexion = crearConexionBD();
 ?>
 
@@ -29,16 +26,14 @@
 </head>
 
 <body>
-	<?php
-	//include_once("index.php");
-	?>
+
 	
 	<main>
 		<?php 
-		//Invocar a la funcion de crea pagos
+
 		if(crea_pagos_pasis($conexion, $pagosPasis)){
 		?>
-		<!--Mensaje de bienvendia-->
+
 		<div id="div_exito">
 			<h1>Se ha registrado correctamente el pago con importe: <?php echo $pagosPasis["importePago"]; ?> €</h1>
 				<script language="javascript"> 
@@ -65,6 +60,6 @@
 </body>	
 </html>
 <?php
-//Desconectar la base de datos
+
 cerrarConexionBD($conexion);
 ?>

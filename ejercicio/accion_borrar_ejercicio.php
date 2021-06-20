@@ -8,20 +8,20 @@
 		require_once("../gestionBD.php");
 		require_once("gestionEjercicios.php");
 		
-		// CREAR LA CONEXIÓN A LA BASE DE DATOS
+
 		$conexion = crearConexionBD();
-		// INVOCAR "QUITAR_TITULO"
+
 		$resultado = elimina_ejercicios($conexion, $ejercicio); 
-		// CERRAR LA CONEXIÓN
+
 		cerrarConexionBD($conexion);
 		
-		// SI LA FUNCIÓN RETORNÓ UN MENSAJE DE EXCEPCIÓN, ENTONCES REDIRIGIR A "EXCEPCION.PHP"
+
 		if($resultado <> true){
 			$_SESSION["excepcion"] = $resultado;
 			$_SESSION["destino"] = "consulta_ejercicios.php";
 			header("Location: ../excepcion.php");
 		}
-		// EN OTRO CASO, VOLVER A "CONSULTA_CLIENTES.PHP"
+
 		else { 
 			echo '<script language="javascript">
   				function cierraPopup(){
@@ -39,6 +39,6 @@
 			</script>';
 		}
 	}
-	else // Se ha tratado de acceder directamente a este PHP 
+	else 
 		header("Location: consulta_ejercicios.php"); 
 ?>

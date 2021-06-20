@@ -24,10 +24,10 @@
 <body>
 	<main>
 		<?php 
-		//Invocar a la funcion de crea clase
+
 			if(crea_salarios($conexion, $nuevoSalario)){
 		?>
-			<!--Mensaje de bienvenida-->
+
 			<div id="div_exito">
 			<?php $fechaMsg = date('d/m/Y', strtotime($nuevoSalario["fecha"]));?>
 				<h1>Se ha registrado correctamente el salario de <?php echo $nuevoSalario['cantidad']?> a 
@@ -57,7 +57,7 @@
 </body>
 </html>
 <?php
-	// DESCONECTAR LA BASE DE DATOS
+
 	cerrarConexionBD($conexion);
 ?>
 

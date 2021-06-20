@@ -22,6 +22,6 @@
 		else {
 			header("Location: muestra_tabla_ejercicio.php");
 		}
-	} else// Se ha tratado de acceder directamente a este PHP
+	} else
 		header("Location: consulta_tablas_ejercicios.php");
 ?>

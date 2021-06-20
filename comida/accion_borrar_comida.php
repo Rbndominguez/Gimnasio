@@ -11,8 +11,7 @@
 		$conexion = crearConexionBD();
 		$resultado = elimina_comida($conexion, $comida);
 		cerrarConexionBD($conexion);
-		
-		// SI LA FUNCIÓN RETORNÓ UN MENSAJE DE EXCEPCIÓN, ENTONCES REDIRIGIR A "EXCEPCION.PHP"
+
 		if($resultado <> true){
 			$_SESSION["excepcion"] = $resultado;
 			$_SESSION["destino"] = "consulta_comidas.php";
@@ -36,6 +35,6 @@
 		}
 
 	}
-	else // Se ha tratado de acceder directamente a este PHP 
+	else 
 		header("Location: consulta_comidas.php"); 
 ?>

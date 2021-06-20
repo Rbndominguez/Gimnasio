@@ -8,20 +8,19 @@
 		require_once("../gestionBD.php");
 		require_once("gestionarClientes.php");
 		
-		// CREAR LA CONEXIÓN A LA BASE DE DATOS
+
 		$conexion = crearConexionBD();
-		// INVOCAR "ELIMINA_CLIENTE"
+
 		$resultado = elimina_cliente($conexion, $cliente);
-		// CERRAR LA CONEXIÓN
+
 		cerrarConexionBD($conexion);
-	
-		// SI LA FUNCIÓN RETORNÓ UN MENSAJE DE EXCEPCIÓN, ENTONCES REDIRIGIR A "EXCEPCION.PHP"
+
 		if($resultado <> true){
 			$_SESSION["excepcion"] = $resultado;
 			$_SESSION["destino"] = "consulta_clientes.php";
 			header("Location: ../excepcion.php");
 		}
-		// EN OTRO CASO, VOLVER A "CONSULTA_CLIENTES.PHP"
+
 		else { 
 			echo '<script language="javascript">
   				function cierraPopup(){
@@ -40,6 +39,6 @@
 		}
 
 	}
-	else // Se ha tratado de acceder directamente a este PHP 
+	else 
 		header("Location: consulta_clientes.php"); 
 ?>

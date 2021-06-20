@@ -25,13 +25,13 @@
 
 <main>
 	<?php
-		// SI LA FUNCIÓN RETORNÓ UN MENSAJE DE EXCEPCIÓN, ENTONCES REDIRIGIR A "EXCEPCION.PHP"
+
 		if($resultado <> true){
 			$_SESSION["excepcion"] = $resultado;
 			$_SESSION["destino"] = "consulta_clientes.php";
 			header("Location: ../excepcion.php");
 		}
-		// EN OTRO CASO, VOLVER A "MUESTRA_CLIENTE.PHP"
+
 		else { ?>
 			<script language="javascript">
   				function cierraPopup(){
@@ -49,7 +49,7 @@
 		<?php }
 
 	}
-	else // Se ha tratado de acceder directamente a este PHP 
+	else 
 		Header("Location: consulta_clientes.php"); 
 ?>
 

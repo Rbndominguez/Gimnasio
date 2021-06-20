@@ -1,10 +1,5 @@
 <?php
 
-#Aquí estan las funciones de gestión de dietas de la capa de acceso a datos
-
-#----------------------------#
-#	  Gestión Dietas		 #
-#----------------------------#
 function crea_dieta($conexion, $dieta) {
 	try {
 		$consulta = "CALL CREA_DIETAS (:nombreDieta, :descripcion, :duracion)";
