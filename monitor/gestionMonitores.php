@@ -53,7 +53,7 @@ function elimina_monitor($conexion, $monitor) {
 
 function dar_baja_monitor($conexion, $monitor, $fechaFin) {
 	try {
-		$consulta = "CALL DAR_BAJA_MONITOR(:dniMonitor, :fecha)";
+		$consulta = "CALL DAR_BAJA_M(:dniMonitor, :fecha)";
 		$statement = $conexion -> prepare($consulta);
 		$statement -> bindParam(":dniMonitor", $monitor["dniMonitor"]);
 		$statement -> bindParam(":fecha", $fechaFin);

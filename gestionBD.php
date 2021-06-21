@@ -4,7 +4,7 @@ function crearConexionBD() {
 
 	$DatosConexion = parse_ini_file("conf_BD.ini", true);
 	$servidor = "127.0.0.1";
-	$bd = "proyecto";
+	$bd = "proyect";
 	$user = "postgres";
 	$password = "a";
 	$puerto = "5432";
@@ -22,7 +22,7 @@ function crearConexionBD() {
 	} 
 	function crearConexionPG() {
 		$servidor = "127.0.0.1";
-		$bd = "proyecto";
+		$bd = "proyect";
 		$user = "postgres";
 		$password = "a";
 		$puerto = "5432";
