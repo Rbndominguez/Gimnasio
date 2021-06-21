@@ -51,9 +51,23 @@ function elimina_monitor($conexion, $monitor) {
 	}
 }
 
+// function dar_baja_monitor($conexion, $monitor, $fechaFin) {
+// 	try {
+// 		$consulta = "CALL DAR_BAJA_MONITOR(:dniMonitor, :fecha)";
+// 		$statement = $conexion -> prepare($consulta);
+// 		$statement -> bindParam(":dniMonitor", $monitor["dniMonitor"]);
+// 		$statement -> bindParam(":fecha", $fechaFin);
+// 		$statement -> execute();
+// 		return true;
+// 	} catch(PDOException $e) {
+// 		echo "error: " . $e -> getMessage();
+// 		return false;
+// 	}
+// }
+
 function dar_baja_monitor($conexion, $monitor, $fechaFin) {
 	try {
-		$consulta = "CALL DAR_BAJA_M(:dniMonitor, :fecha)";
+		$consulta = "UPDATE Monitores SET fechafin = :fecha, estaactivo = 0 WHERE dnimonitor = :dniMonitor";
 		$statement = $conexion -> prepare($consulta);
 		$statement -> bindParam(":dniMonitor", $monitor["dniMonitor"]);
 		$statement -> bindParam(":fecha", $fechaFin);
